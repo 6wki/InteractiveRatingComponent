@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Interactive rating component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+      }
+
+      body {
+        background-color: hsl(216, 12%, 8%);
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: hsl(0, 0%, 100%);
+        position: relative;
+      }
+
+      .container {
+        background-color: hsl(213, 19%, 18%);
+        width: 20rem;
+        height: 20rem;
+        border-radius: 1.5rem;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      p {
+        color: hsl(217, 12%, 63%);
+      }
+
+      header img {
+        background-color: hsla(216, 12%, 54%, 0.111);
+        width: 1rem;
+        padding: 0.7rem;
+        border-radius: 50%;
+      }
+
+      .attribution {
+        position: absolute;
+        bottom: 0.5rem;
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+
+      .rating {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      label,
+      button {
+        cursor: pointer;
+        width: 3rem;
+        height: 3rem;
+        border: none;
+        border-radius: 50%;
+        background-color: hsla(216, 12%, 54%, 0.111);
+        color: #fff;
+      }
+
+      label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      input:checked ~ label {
+        background-color: hsl(217, 12%, 63%);
+      }
+
+      input {
+        display: none;
+      }
+
+      label:hover {
+        background-color: hsl(25, 97%, 53%);
+      }
+
+      button:hover {
+        background-color: #fff;
+        color: hsl(25, 97%, 53%);
+      }
+
+      .submite {
+        border-radius: 2rem;
+        border: none;
+        width: 100%;
+        color: #fff;
+        background-color: hsl(25, 97%, 53%);
+      }
+
+      .c2 {
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+        justify-content: center;
+        display: none;
+      }
+
+      .c2 h1 {
+        margin-top: 1rem;
+      }
+
+      .c2 img {
+        width: 10rem;
+      }
+
+      .alert {
+        background-color: #df2e38;
+        color: #fff;
+        padding: 1rem;
+        border-radius: 1rem;
+        position: absolute;
+        top: 1rem;
+        animation: animeeee forwards 2.5s ease-in-out;
+      }
+
+      @keyframes animeeee {
+        0% {
+          top: -5rem;
+        }
+
+        10% {
+          top: 1rem;
+        }
+
+        90% {
+          top: 1rem;
+        }
+
+        100% {
+          top: -5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container c1">
+      <header>
+        <img src="./images/icon-star.svg" alt="" />
+      </header>
+      <h1>How did we do?</h1>
+      <p>
+        Please let us know how we did with your support request. All feedback is
+        appreciated to help us improve our offering!
+      </p>
+      <div class="rating">
+        <div>
+          <input class="inp" type="radio" name="rating" id="rate1" />
+          <label for="rate1">1</label>
+        </div>
+        <div>
+          <input class="inp" type="radio" name="rating" id="rate2" />
+          <label for="rate2">2</label>
+        </div>
+        <div>
+          <input class="inp" type="radio" name="rating" id="rate3" />
+          <label for="rate3">3</label>
+        </div>
+        <div>
+          <input class="inp" type="radio" name="rating" id="rate4" />
+          <label for="rate4">4</label>
+        </div>
+        <div>
+          <input class="inp" type="radio" name="rating" id="rate5" />
+          <label for="rate5">5</label>
+        </div>
+      </div>
+      <button class="submite">Submite</button>
+    </div>
+    <div class="container c2">
+      <img src="./images/illustration-thank-you.svg" alt="" />
+      <p class="orn">You selected.. delete this text</p>
+      <h1>Thank you!</h1>
+      <p>
+        We appreciate you taking the time to give a rating. If you ever need
+        more support, don't hesitate to get in touch!
+      </p>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
